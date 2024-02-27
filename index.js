@@ -1,5 +1,6 @@
 import express from 'express';
 import mammalRouter from './routes/mammals.js';
+import reptileRouter from './routes/reptiles.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/mammals', mammalRouter)
+app.use('/reptiles', reptileRouter)
 
 app.use(express.static('public'));
 app.listen(port, () => console.log(`Listening on port: ${port}`));
