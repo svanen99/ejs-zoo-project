@@ -1,0 +1,64 @@
+:root {
+    --light-bg-color: rgb(245, 250, 243);
+    --light-contrast: rgb(235, 255, 208);
+    --accent-color: rgb(67, 122, 45);
+    --highligt-color: #7e9c72;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    background-color: var(--light-bg-color);
+    margin: 0;
+}
+
+header {
+    padding: 24px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: auto;
+    padding: 16px;
+}
+
+nav ul li {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    padding: 8px 16px;
+    transition: all .3;
+}
+
+nav ul li:hover {
+    background-color:var(--highligt-color);
+}
+
+a, 
+a:visited,
+a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    text-align: center;
+}
