@@ -7,8 +7,8 @@ birdRouter.get('/',(req, res) =>
     res.render(
         "pages/birds",
         {
-            pageTitle: "Bird",
-            subTitle: "We are a little scared of these things",
+            pageTitle: "Birds",
+            subTitle: "We like these little things",
             className: "birds",
             animals: birds
         }
