@@ -1,8 +1,9 @@
 :root {
     --light-bg-color: rgb(245, 250, 243);
-    --light-contrast: rgb(235, 255, 208);
+    --light-contrast: #8a9c83;
     --accent-color: rgb(67, 122, 45);
     --highligt-color: #7e9c72;
+    --shadow-color: rgb(15, 33, 15);
 }
 
 * {
@@ -61,4 +62,40 @@ a:active {
 
 .main-content {
     text-align: center;
+}
+
+.info-short {
+    align-items: center;
+    background-color: var(--light-contrast);
+    box-shadow: var(--shadow-color) 0px 20px 30px -10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    width: 230px;
+    height: 400px;
+    text-align: center;
+    padding: 24px;
+    margin: 40px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.small-animal-img {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 300px) {
+
+    .info-short {
+        height: min-content;
+        width: 205px;
+    }
+}    
+
+@media screen and (min-width: 769px) {
+
+    .info-short:hover {
+        background-color: var(--hover-greenish);
+    }
 }
