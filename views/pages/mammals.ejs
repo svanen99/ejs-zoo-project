@@ -4,6 +4,7 @@
     <body class=<%=className %>>
         <%- include("../partials/header") %>
         <div class="main-content">
+            <%- include("../partials/sidebar") %>
             <% if (locals.className==="mammals" ) { %>
                 <%- include("../partials/animals-short") %>
                     <% } else { %>
