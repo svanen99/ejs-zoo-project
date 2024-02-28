@@ -3,7 +3,7 @@
         <% animals.forEach(animal => { %>
             <div class="info-short">
                 <h3><%= animal.name %></h3>
-                <img class="small-animal-img" src=<%= `images/${animal.name}-small.png` %> height="100px" width="100px" alt=<%= `image of ${animal.name}` %> > </img>
+                <img class="small-animal-img" src=<%= `images/${animal.name}.png` %> height="100px" width="100px" alt=<%= `image of ${animal.name}` %> > </img>
                 <p><span>Food:</span> <%= animal.food %></p>
                 <p><span>Location:</span> <%= animal.location %></p>
                 <button class="read-more-btn">Read more</button>
