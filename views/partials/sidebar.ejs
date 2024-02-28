@@ -1,2 +1,14 @@
+
 <nav class="sidebar">
+    <ul>
+        <% if (locals.animals) { %>
+            <% animals.forEach(animal => { %>
+            <li><a href="/"><%= animal.name %></a></li>
+       <%  }) %>
+       <% } else { %>
+        <li><a href="/mammals"> Mammals</a></li>
+        <li><a href="/reptiles"> Reptiles</a></li>
+        <li><a href="/birds"> Birds</a></li>
+        <% } %>
+    </ul>
 </nav>
