@@ -1,5 +1,7 @@
+import { mammals, reptiles, birds } from '../../data/animals.js'
 $(() => {   
     console.log("hi from sidebar.js")
+    
 
     const populateSidebar = () => {
         $(".sidebar").empty();
