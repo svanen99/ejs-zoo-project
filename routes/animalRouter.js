@@ -1,12 +1,13 @@
 import express from 'express';
+import * as path from 'path';
 
-import { mammals, reptiles, birds } from '../data/animals.js';
+const animalRouter = express.Router({mergeParams: true});
+const __dirname = path.resolve();
 
-const animalRouter = express.Router();
-
-animalRouter.get(`/echidna`, (req, res) => 
+animalRouter.get(`/:animalType`, (req, res) => {
+    const animalType = req.params.animalType;
     res.render(
-        `pages/${animal.group}`,
+        `pages/${animalType}`,
         {
             pageTitle: `${animal.name}`,
             subTitle: "So you wanna know more about this little fella?",
