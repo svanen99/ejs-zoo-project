@@ -1,5 +1,6 @@
-import express from "express"
+import express, { application } from "express"
 import { mammals } from "../data/animals.js"
+import animalRouter from './animals.js'
 
 const mammalRouter = express.Router();
 
@@ -14,5 +15,6 @@ mammalRouter.get('/',(req, res) =>
         }
     )
 )
+
 
 export default mammalRouter;
