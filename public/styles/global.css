@@ -41,7 +41,9 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
- }
+}
+
+
 
 header p {
     font-size: 1.5rem;
@@ -136,7 +138,8 @@ a:active {
     justify-content: space-between;
 }
 
-.info-short h3 {
+.info-short h3,
+.info-long h3 {
     text-transform: capitalize;
 }
 
