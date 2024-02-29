@@ -1,5 +1,6 @@
 import express from "express"
 import { reptiles } from "../data/animals.js"
+import animalRouter from './animalRouter.js'
 
 const reptileRouter = express.Router();
 
