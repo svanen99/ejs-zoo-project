@@ -104,11 +104,8 @@ a:active {
     text-decoration: none;
 }
 
-
-
 .main-content {
     display: flex;
-    /* text-align: center; */
 }
 
 .animals {
