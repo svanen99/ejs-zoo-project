@@ -10,7 +10,7 @@ birdRouter.get('/',(req, res) =>
             pageTitle: "Birds",
             subTitle: "We like these little things",
             className: "birds",
-            animals: birds
+            animals: birds,
         }
     )
 )
