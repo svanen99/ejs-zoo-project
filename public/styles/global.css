@@ -41,7 +41,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
- }
+}
+
+.box h1 {
+    text-transform: capitalize;
+}
 
 header p {
     font-size: 1.5rem;
