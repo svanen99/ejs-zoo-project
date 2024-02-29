@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     background-color: var(--light-bg-color);
     margin: 0;
 }
@@ -35,6 +35,24 @@ h1 {
     padding: 24px;
     color: #283618;
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.welcomeMessage {
+    color: var(--highligt-color);
+    position: absolute;
+    padding-left: 193px;
+    margin-bottom: 1406px;
+}
+
+.welcomeSubtitle {
+    color: #7e9c72;
+    margin-left: 10px; 
 }
 
 .box {
@@ -237,10 +255,18 @@ a:active {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 576px) {
 
     .info-short {
         height: min-content;
         width: 205px;
     }
+
+    .welcomeMessage {
+        color: var(--highligt-color);
+        position: absolute;
+        padding-left: 170px;
+        margin-bottom: 1200px;
+    }
 }    
+
