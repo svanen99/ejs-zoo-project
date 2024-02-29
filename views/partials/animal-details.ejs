@@ -1,6 +1,5 @@
 <div class="animals">
     <% if (locals.animals) { %>
-        <% animals.forEach(animal => { %>
             <div class="info-long">
                 <h3><%= animal.name %></h3>
                 <img class="small-animal-img" src=<%= `images/${animal.name}.png` %> height="100px" width="100px" alt=<%= `image of ${animal.name}` %> > </img>
@@ -11,7 +10,6 @@
                 <p><span>Weight:</span> <%= animal.weight %></p>
                 <button class="go-back">Back</button>
             </div>
-       <%  }) %>
     <% } %>
 </div>
 
