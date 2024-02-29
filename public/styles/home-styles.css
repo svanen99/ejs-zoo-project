@@ -1,0 +1,33 @@
+/* :root {
+    --light-bg-color: rgb(245, 250, 243);
+    --light-contrast: #8a9c83;
+    --accent-color: rgb(67, 122, 45);
+    --highligt-color: #7e9c72;
+    --button-color: rgb(157, 152, 152);
+    --dark-color: rgb(22, 40, 15);
+    --shadow-color: rgb(15, 33, 15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--highligt-color);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7e9c72;
+} */

@@ -17,6 +17,8 @@ app.get('/', (req, res) => {
         {
             pageTitle: 'Zooniverse',
             subTitle: 'Welcome to our magical Zooniverse',
+            welcomeMessage: 'Welcome to our website!',
+            welcomeSubtitle: 'Here you will find some amazing animals, have a look for yourself!',
             animals: {
                 mammals: mammals, 
                 reptiles: reptiles, 
