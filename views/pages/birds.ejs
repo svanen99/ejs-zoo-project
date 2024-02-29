@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+    <body class=<%=className %>>
+        <%- include("../partials/header") %>
+        <div class="main-content">
+            <% if (locals.className==="birds" ) { %>
+                <%- include("../partials/animals-short") %>
+                    <% } else { %>
+                <%- include("../partials/no-match") %>
+            <% } %>
+        </div>
+        <%- include("../partials/footer") %>
+    </body>
+</html>
+
