@@ -21,8 +21,6 @@ app.get('/', (req, res) => {
 app.use('/mammals', mammalRouter)
 app.use('/reptiles', reptileRouter)
 app.use('/birds', birdRouter)
-app.use(`/${animal.name}`, animalRouter)
-
 
 app.use(express.static('public'));
 app.listen(port, () => console.log(`Listening on port: ${port}`));
