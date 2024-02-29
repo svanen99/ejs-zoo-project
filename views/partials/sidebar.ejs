@@ -1,14 +1,9 @@
-
 <nav class="sidebar">
     <ul>
-        <% if (locals.animals) { %>
-            <% animals.forEach(animal => { %>
-            <li><a href="/"><%= animal.name %></a></li>
-       <%  }) %>
-       <% } else { %>
-        <li><a href="/mammals"> Mammals</a></li>
-        <li><a href="/reptiles"> Reptiles</a></li>
-        <li><a href="/birds"> Birds</a></li>
-        <% } %>
+        <% if (locals.animals.mammals || locals.animals.reptiles || locals.animals.birds) { %>
+            "all groups here";
+        <% } else if (locals.animals) { %>
+            just one group;
+        <% } %> 
     </ul>
 </nav>
