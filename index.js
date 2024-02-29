@@ -2,6 +2,9 @@ import express from 'express';
 import mammalRouter from './routes/mammals.js';
 import reptileRouter from './routes/reptiles.js';
 import birdRouter from './routes/birds.js';
+import { mammals } from "./data/animals.js"
+import { reptiles } from "./data/animals.js"
+import { birds } from "./data/animals.js"
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,9 +17,14 @@ app.get('/', (req, res) => {
         {
             pageTitle: 'Zooniverse',
             subTitle: 'Welcome to our magical Zooniverse',
+            animals: {
+                mammals: mammals, 
+                reptiles: reptiles, 
+                birds: birds,
+            }
         }
     )
-})
+});
 
 app.use('/mammals', mammalRouter)
 app.use('/reptiles', reptileRouter)
