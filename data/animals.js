@@ -29,7 +29,9 @@ export const birds = [
 ]
 
 export const animals = [].concat(
-    mammals.map(animal => animal.name),
-    reptiles.map(animal => animal.name),
-    birds.map(animal => animal.name)
+    mammals.map(animal => animal.name.toLowerCase()),
+    reptiles.map(animal => animal.name.toLowerCase()),
+    birds.map(animal => animal.name.toLowerCase())
 );
+
+console.log(animals)

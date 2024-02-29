@@ -3,26 +3,26 @@ import { animals } from '../data/animals.js';
 
 const animalRouter = express.Router();
 
-animalRouter.get('/?animalType=animalType', (req, res) => {
+animalRouter.get('/:animalType', (req, res) => {
     const animalType = req.params.animalType;
 
-    const animal = animals.find(animal => animal.name.toLowerCase() === animalType.toLowerCase());
+    // const animal = animals.find(animal === animalType);
 
-    if (animal) {
-        // res.render(
-        //     'pages/animal-details',
-        //     {
-        //         pageTitle: animalType,
-        //         subTitle: "Here's some more info about this little fella",
-        //         animal: animal
-        //     }
-        // )
-        res.send("animal found!")
+    if (animals.animalType) {
+        console.log("animal found!")
+        res.render(
+            'pages/animal-detailed',
+            {
+                pageTitle: animalType,
+                subTitle: "Here's some more info about this little fella",
+                className: "detailed-animal",
+                animal: animal
+            }
+        )
     } else {
         res.status(404).send("Oops, animal not found");
     }
 });
 
 export default animalRouter;
-console.log(animals);
 
