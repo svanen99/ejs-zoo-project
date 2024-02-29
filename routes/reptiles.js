@@ -16,6 +16,6 @@ reptileRouter.get('/',(req, res) =>
     )
 )
 
-reptileRouter.use('/:animalType', animalRouter);
+reptileRouter.use('/', animalRouter);
 
 export default reptileRouter;

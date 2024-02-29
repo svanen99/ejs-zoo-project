@@ -6,9 +6,7 @@ const animalRouter = express.Router();
 animalRouter.get('/:animalType', (req, res) => {
     const animalType = req.params.animalType;
 
-    // const animal = animals.find(animal === animalType);
-
-    if (animals.animalType) {
+    if (animalType) {
         console.log("animal found!")
         res.render(
             'pages/animal-detailed',
@@ -16,7 +14,6 @@ animalRouter.get('/:animalType', (req, res) => {
                 pageTitle: animalType,
                 subTitle: "Here's some more info about this little fella",
                 className: "detailed-animal",
-                animal: animal
             }
         )
     } else {

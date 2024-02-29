@@ -5,7 +5,6 @@ import animalRouter from './animalRouter.js'
 const mammalRouter = express.Router();
 
 mammalRouter.get('/',(req, res) => 
-    
     res.render(
         "pages/mammals",
         {

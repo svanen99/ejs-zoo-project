@@ -16,6 +16,6 @@ birdRouter.get('/',(req, res) =>
     )
 )
 
-birdRouter.use('/:animalType', animalRouter);
+birdRouter.use('/', animalRouter);
 
 export default birdRouter;
