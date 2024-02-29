@@ -6,7 +6,7 @@
                 <img class="small-animal-img" src=<%= `images/${animal.name}.png` %> height="100px" width="100px" alt=<%= `image of ${animal.name}` %> > </img>
                 <p><span>Food:</span> <%= animal.food %></p>
                 <p><span>Location:</span> <%= animal.location %></p>
-                <button class="read-more-btn" href=`/${animal.name}`>Read more</button>
+                <a class="read-more-btn" href= <%=`/${animal.group}?animalType=${animal.name}`%>>Read more</a>
             </div>
        <%  }) %>
     <% } %>
