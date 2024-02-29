@@ -3,7 +3,9 @@
         <% if (locals.animals.mammals || locals.animals.reptiles || locals.animals.birds) { %>
             "all groups here";
         <% } else if (locals.animals) { %>
-            just one group;
+            <% animals.forEach(animal => { %>
+            <li><a href='/'> <%= animal.name %> </a></li>
+        <% }) %>
         <% } %> 
     </ul>
 </nav>
