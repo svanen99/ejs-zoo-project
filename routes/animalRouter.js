@@ -7,7 +7,6 @@ animalRouter.get('/:animalType', (req, res) => {
     const animalType = req.params.animalType;
 
     if (animalType) {
-        console.log("animal found!")
         res.render(
             'pages/animal-detailed',
             {
