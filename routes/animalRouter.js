@@ -3,7 +3,7 @@ import { animals } from '../data/animals.js';
 
 const animalRouter = express.Router();
 
-animalRouter.get('/?animalType', (req, res) => {
+animalRouter.get('/?animalType=animalType', (req, res) => {
     const animalType = req.params.animalType;
 
     const animal = animals.find(animal => animal.name.toLowerCase() === animalType.toLowerCase());
