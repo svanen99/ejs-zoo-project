@@ -6,6 +6,7 @@ import { mammals } from "./data/animals.js"
 import { reptiles } from "./data/animals.js"
 import { birds } from "./data/animals.js"
 
+
 const app = express();
 const port = process.env.PORT || 3000;
 
