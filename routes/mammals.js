@@ -16,6 +16,6 @@ mammalRouter.get('/',(req, res) =>
     )
 )
 
-mammalRouter.use(`/:animalType`, animalRouter);
+mammalRouter.use('/:animalType', animalRouter);
 
 export default mammalRouter;
