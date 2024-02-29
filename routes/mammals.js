@@ -1,4 +1,4 @@
-import express, { application } from "express"
+import express from "express"
 import { mammals } from "../data/animals.js"
 import animalRouter from './animalRouter.js'
 
