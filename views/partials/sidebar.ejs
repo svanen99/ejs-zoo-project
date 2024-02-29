@@ -1,7 +1,11 @@
 <nav class="sidebar">
     <ul>
         <% if (locals.animals.mammals || locals.animals.reptiles || locals.animals.birds) { %>
-            "all groups here";
+            <% Object.values(locals.animals).forEach(animalGroup => {
+                animalGroup.forEach(animal => { %>
+                    <li><a href="/"><%= animal.name %></a></li>
+                <% }) 
+            }) %>
         <% } else if (locals.animals) { %>
             <% animals.forEach(animal => { %>
             <li><a href='/'> <%= animal.name %> </a></li>
