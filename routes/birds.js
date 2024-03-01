@@ -2,6 +2,7 @@ import express from "express"
 import { birds } from "../data/animals.js"
 import animalRouter from './animalRouter.js'
 
+
 const birdRouter = express.Router();
 
 birdRouter.get('/',(req, res) => 
@@ -17,5 +18,7 @@ birdRouter.get('/',(req, res) =>
 )
 
 birdRouter.use('/', animalRouter);
+
+
 
 export default birdRouter;

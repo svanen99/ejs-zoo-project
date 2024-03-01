@@ -6,6 +6,7 @@ import { mammals } from "./data/animals.js"
 import { reptiles } from "./data/animals.js"
 import { birds } from "./data/animals.js"
 
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -17,6 +18,8 @@ app.get('/', (req, res) => {
         {
             pageTitle: 'Zooniverse',
             subTitle: 'Welcome to our magical Zooniverse',
+            welcomeMessage: 'Welcome to our website!',
+            welcomeSubtitle: 'Here you will find some amazing animals, have a look for yourself!',
             animals: {
                 mammals: mammals, 
                 reptiles: reptiles, 
