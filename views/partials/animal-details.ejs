@@ -1,13 +1,16 @@
 <div class="animals">
-    <div class="info-long">
-        <h3><%= animal.name %> animal . name </h3>
-        <img class="small-animal-img" src=<%= `/images/${animal.name}.png` %> height="100px" width="100px" alt=<%= `image of ${animal.name}` %> > </img>
-        <p><span>Lifespan:</span> <%= animal.lifespan %></p>
-        <p><span>Group:</span> <%= animal.group %></p>
-        <p><span>Description:</span> <%= animal.description%></p>
-        <p><span>Length:</span> <%= animal.length %></p>
-        <p><span>Weight:</span> <%= animal.weight %></p>
-        <button class="go-back">Back</button>
-    </div>
+<!-- search mammals and check for right name or do in router-->
+    <% if(locals.animalGroup === mammals) { %>
+        <div class="info-long">
+            <h3><%= mammal.name %> animal . name </h3>
+            <img class="small-animal-img" src=<%= `/images/${animal.name}.png` %> height="100px" width="100px" alt=<%= `image of ${animal.name}` %> > </img>
+            <p><span>Lifespan:</span> <%= animal.lifespan %></p>
+            <p><span>Group:</span> <%= animal.group %></p>
+            <p><span>Description:</span> <%= animal.description%></p>
+            <p><span>Length:</span> <%= animal.length %></p>
+            <p><span>Weight:</span> <%= animal.weight %></p>
+            <button class="go-back">Back</button>
+        </div>
+} 
 </div>
        
