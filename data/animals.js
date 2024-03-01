@@ -33,3 +33,7 @@ export const animals = [].concat(
     birds.map(animal => animal.name)
 );
 
+
+
+// refactor
+
