@@ -11,7 +11,12 @@ let animalName = "echidna";
 
 animalRouter.get('/:animalType', (req, res) => {
     const animalName = req.params.animalType;
-    if (mammals.some(animal => animal.name === animalName)) { 
+
+    const animal = animals.filter(item => item.name === animalName)
+    console.log(animal + animalName)
+
+
+    // if (mammals.some(animal => animal.name === animalName)) { 
         
         res.render(
             'pages/animal-detailed',
@@ -19,41 +24,41 @@ animalRouter.get('/:animalType', (req, res) => {
                 pageTitle: animalName,
                 subTitle: "Here's some more info about this little fella",
                 className: "detailed-animal",
-                animal: animalName,
+                animal: animal[0],
                 animalGroup: mammals
             }
         );
 
-    } else if (reptiles.some(animal => animal.name === animalName)) {
-        console.log("it's a reptile");
+//     } else if (reptiles.some(animal => animal.name === animalName)) {
+//         console.log("it's a reptile");
 
-        res.render(
-            'pages/animal-detailed',
-            {
-                pageTitle: animalName,
-                subTitle: "Here's some more info about this little fella",
-                className: "detailed-animal",
-                animal: animalName,
-                animalGroup: mammals,
-            }
-        );
+//         res.render(
+//             'pages/animal-detailed',
+//             {
+//                 pageTitle: animalName,
+//                 subTitle: "Here's some more info about this little fella",
+//                 className: "detailed-animal",
+//                 animal: animalName,
+//                 animalGroup: reptiles,
+//             }
+//         );
 
-    } else if (birds.some(animal => animal.name === animalName)) {
-        console.log("it's a bird")
+//     } else if (birds.some(animal => animal.name === animalName)) {
+//         console.log("it's a bird")
 
-        res.render(
-            'pages/animal-detailed',
-            {
-                pageTitle: animalName,
-                subTitle: "Here's some more info about this little fella",
-                className: "detailed-animal",
-                animal: animalName,
-                animalGroup: mammals,
-            }
-        );
-    } else {
-        res.status(404).send("Oops, animal not found");
-    }
+//         res.render(
+//             'pages/animal-detailed',
+//             {
+//                 pageTitle: animalName,
+//                 subTitle: "Here's some more info about this little fella",
+//                 className: "detailed-animal",
+//                 animal: animalName,
+//                 animalGroup: birds,
+//             }
+//         );
+//     } else {
+//         res.status(404).send("Oops, animal not found");
+//     }
 });
 
 export default animalRouter;
